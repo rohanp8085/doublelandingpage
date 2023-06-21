@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+}
+.split{
+
+    width: 50%;
+    height: 100%;
+   display: flex;
+   align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    overflow: hidden;
+}
+.split.left{
+    
+    background-color: rgb(222, 122, 102);
+    background-position: center;
+    background-size: cover;
+    background-image: url(./images/pexels-chevanon-photography-1108099.jpg);
+}
+.split.right{
+    background-color: aqua;
+    background-image: url(./images/pexels-cong-h-11890339.jpg);
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    backdrop-filter: brightness(0.5);
+    width: 100%;
+    text-align: center;
+    font-size: 90px;
+    color: rgb(250, 250, 250);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 4px solid white;
+    transition: all ease-in-out .3s;
+}
+.active-left .left{
+    width: 75%;
+}
+.active-left .right{
+    width: 25%;
+}
+.active-right .right{
+    width: 75%;
+}
+.active-right .left{
+    width: 25%;
+}
+
+.left  , .right{
+    transition: width 2s ease-in-out;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    border:  4px solid black;
+}
